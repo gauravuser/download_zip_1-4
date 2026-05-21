@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Center</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .main-heading {
+            text-align: center;
+            color: white;
+            font-size: 42px;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: 0.4s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .card h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .zip-btn {
+            background: linear-gradient(45deg, #ff6b00, #ff9f43);
+        }
+
+        .image-btn {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.08);
+            opacity: 0.92;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #d1d5db;
+            margin-top: 35px;
+            font-size: 15px;
+        }
+
+        @media(max-width: 600px) {
+            .main-heading {
+                font-size: 32px;
+            }
+
+            .card {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="main-heading">Download Center</h1>
+
+        <div class="download-grid">
+
+            <div class="card">
+                <h2>Download Zip 1</h2>
+                <a href="1.zip" download class="download-btn zip-btn">
+                    Download Now
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Download Zip 2</h2>
+                <a href="2.zip" download class="download-btn zip-btn">
+                    Download Now
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Download Zip 3</h2>
+                <a href="3.zip" download class="download-btn zip-btn">
+                    Download Now
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Download Zip 4</h2>
+                <a href="4.zip" download class="download-btn zip-btn">
+                    Download Now
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Open Image</h2>
+                <a href="ipure.jpeg" class="download-btn image-btn">
+                    Open Now
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Download Image</h2>
+                <a href="ipure.jpeg" download class="download-btn image-btn">
+                    Download Now
+                </a>
+            </div>
+
+        </div>
+
+        <p class="footer-text">
+            Premium Download Webpage Design
+        </p>
+
+    </div>
+
+</body>
+
+</html>
